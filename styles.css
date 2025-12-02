@@ -6,18 +6,32 @@
 }
 
 :root {
-    /* Paleta de Cores Official LYNN */
-    --primary-pink: #EB2C85;       /* Pink vibrante */
-    --primary-purple: #912AB0;     /* Roxo intenso */
-    --primary-cyan: #EFA6F7;       /* Lilás suave */
-    --primary-green: #16F02B;      /* Verde neon */
-    --primary-yellow: #FFF200;     /* Amarelo neon */
-    --secondary-pink: #F7A6C0;     /* Rosa claro */
+    /* ===== PALETA OFICIAL LYNN ===== */
+    
+    /* CORES PRINCIPAIS (linha superior da paleta) */
+    --neon-yellow: #FFF200;        /* Amarelo neon */
+    --neon-green: #16F02B;         /* Verde neon */
+    --hot-pink: #EB2C85;           /* Pink vibrante */
+    
+    /* CORES COMPLEMENTARES (linha inferior da paleta) */
+    --soft-pink: #F7A6C0;          /* Rosa claro */
+    --deep-purple: #912AB0;        /* Roxo */
+    --light-purple: #EFA6F7;       /* Lilás */
+    
+    /* MAPEAMENTO PARA USO NO SITE */
+    --primary-pink: #EB2C85;       /* Cor principal do site */
+    --primary-green: #16F02B;      /* Accent/destaque */
+    --primary-yellow: #FFF200;     /* Energia/atenção */
+    --primary-purple: #912AB0;     /* Profundidade */
+    --secondary-pink: #F7A6C0;     /* Suave */
+    --secondary-purple: #EFA6F7;   /* Delicado */
+    
+    /* CORES DE FUNDO E TEXTO */
     --bg-dark: #0a0a0a;
     --bg-darker: #050505;
     --text-light: #ffffff;
     --text-gray: #a0a0a0;
-    --accent-neon: #16F02B;        /* Verde neon como accent */
+    --accent-neon: #16F02B;
 }
 
 html {
@@ -46,7 +60,7 @@ body {
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 2px solid var(--primary-pink);
+    border-bottom: 2px solid var(--hot-pink);
     transition: all 0.3s ease;
 }
 
@@ -60,7 +74,7 @@ body {
 .logo h1 {
     font-family: 'Permanent Marker', cursive;
     font-size: 2rem;
-    background: linear-gradient(135deg, var(--primary-pink), var(--primary-purple), var(--primary-cyan));
+    background: linear-gradient(135deg, var(--hot-pink), var(--deep-purple), var(--neon-green));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -98,7 +112,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--primary-pink), var(--primary-cyan));
+    background: linear-gradient(90deg, var(--hot-pink), var(--neon-green));
     transition: width 0.3s ease;
 }
 
@@ -107,7 +121,7 @@ body {
 }
 
 .nav-menu li a:hover {
-    color: var(--primary-pink);
+    color: var(--hot-pink);
 }
 
 /* Hamburger Menu */
@@ -121,7 +135,7 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--primary-pink);
+    background: var(--hot-pink);
     transition: all 0.3s ease;
 }
 
@@ -157,11 +171,11 @@ body {
     font-family: 'Permanent Marker', cursive;
     font-size: clamp(4rem, 15vw, 10rem);
     font-weight: 800;
-    background: linear-gradient(135deg, var(--primary-pink), var(--primary-purple), var(--primary-cyan), var(--primary-green));
+    background: linear-gradient(135deg, var(--hot-pink), var(--deep-purple), var(--neon-green), var(--neon-yellow));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0 0 30px rgba(255, 20, 147, 0.5);
+    text-shadow: 0 0 30px rgba(235, 44, 133, 0.5);
     animation: glitch 3s infinite;
     letter-spacing: 5px;
 }
@@ -193,7 +207,7 @@ body {
 .cta-button {
     display: inline-block;
     padding: 15px 40px;
-    background: linear-gradient(135deg, var(--primary-pink), var(--primary-purple));
+    background: linear-gradient(135deg, var(--hot-pink), var(--deep-purple));
     color: var(--text-light);
     text-decoration: none;
     font-weight: 700;
@@ -202,7 +216,7 @@ body {
     border-radius: 50px;
     transition: all 0.3s ease;
     border: 2px solid transparent;
-    box-shadow: 0 10px 30px rgba(255, 20, 147, 0.3);
+    box-shadow: 0 10px 30px rgba(235, 44, 133, 0.3);
 }
 
 .cta-button:hover {
@@ -213,14 +227,14 @@ body {
 
 .cta-button.secondary {
     background: transparent;
-    border: 2px solid var(--primary-cyan);
-    box-shadow: 0 10px 30px rgba(0, 206, 209, 0.2);
+    border: 2px solid var(--neon-green);
+    box-shadow: 0 10px 30px rgba(22, 240, 43, 0.2);
 }
 
 .cta-button.secondary:hover {
-    background: var(--primary-cyan);
+    background: var(--neon-green);
     color: var(--bg-dark);
-    box-shadow: 0 15px 40px rgba(0, 206, 209, 0.4);
+    box-shadow: 0 15px 40px rgba(22, 240, 43, 0.4);
 }
 
 /* Scroll Indicator */
@@ -237,7 +251,7 @@ body {
 .scroll-indicator span {
     width: 3px;
     height: 20px;
-    background: var(--primary-pink);
+    background: var(--hot-pink);
     animation: scroll 1.5s infinite;
 }
 
@@ -260,7 +274,7 @@ body {
     font-size: clamp(2.5rem, 6vw, 4rem);
     text-align: center;
     margin-bottom: 60px;
-    background: linear-gradient(135deg, var(--primary-pink), var(--primary-cyan));
+    background: linear-gradient(135deg, var(--hot-pink), var(--neon-green));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -296,8 +310,8 @@ body {
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: linear-gradient(135deg, var(--primary-pink), var(--primary-purple));
-    border-color: var(--primary-pink);
+    background: linear-gradient(135deg, var(--hot-pink), var(--deep-purple));
+    border-color: var(--hot-pink);
     transform: translateY(-2px);
 }
 
@@ -344,7 +358,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, transparent 0%, rgba(255, 20, 147, 0.9) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(235, 44, 133, 0.9) 100%);
     opacity: 0;
     transition: all 0.3s ease;
     display: flex;
@@ -417,7 +431,7 @@ body {
 .skills h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: var(--primary-cyan);
+    color: var(--neon-green);
     letter-spacing: 2px;
 }
 
@@ -429,8 +443,8 @@ body {
 
 .skill-tags span {
     padding: 10px 20px;
-    background: rgba(255, 20, 147, 0.1);
-    border: 1px solid var(--primary-pink);
+    background: rgba(235, 44, 133, 0.1);
+    border: 1px solid var(--hot-pink);
     border-radius: 25px;
     font-size: 0.9rem;
     color: var(--text-light);
@@ -438,7 +452,7 @@ body {
 }
 
 .skill-tags span:hover {
-    background: var(--primary-pink);
+    background: var(--hot-pink);
     transform: translateY(-3px);
 }
 
@@ -450,16 +464,16 @@ body {
 .image-frame {
     width: 400px;
     height: 500px;
-    border: 3px solid var(--primary-pink);
+    border: 3px solid var(--hot-pink);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(255, 20, 147, 0.3);
+    box-shadow: 0 20px 60px rgba(235, 44, 133, 0.3);
 }
 
 .placeholder-artist {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+    background: linear-gradient(135deg, var(--deep-purple), var(--hot-pink));
 }
 
 /* Contact Section */
@@ -490,7 +504,7 @@ body {
 .contact-item h3 {
     font-size: 1rem;
     letter-spacing: 2px;
-    color: var(--primary-cyan);
+    color: var(--neon-green);
     margin-bottom: 10px;
 }
 
@@ -503,7 +517,7 @@ body {
 }
 
 .contact-item a:hover {
-    color: var(--primary-pink);
+    color: var(--hot-pink);
 }
 
 .contact-form {
@@ -527,8 +541,8 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--primary-pink);
-    background: rgba(255, 20, 147, 0.05);
+    border-color: var(--hot-pink);
+    background: rgba(235, 44, 133, 0.05);
 }
 
 .contact-form textarea {
@@ -540,7 +554,7 @@ body {
 .footer {
     background: var(--bg-dark);
     padding: 60px 0 30px;
-    border-top: 2px solid var(--primary-pink);
+    border-top: 2px solid var(--hot-pink);
 }
 
 .footer-content {
@@ -553,7 +567,7 @@ body {
 .footer-brand h3 {
     font-family: 'Permanent Marker', cursive;
     font-size: 2rem;
-    background: linear-gradient(135deg, var(--primary-pink), var(--primary-cyan));
+    background: linear-gradient(135deg, var(--hot-pink), var(--neon-green));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -577,7 +591,7 @@ body {
 }
 
 .footer-social a:hover {
-    color: var(--primary-pink);
+    color: var(--hot-pink);
 }
 
 .footer-bottom {
@@ -630,7 +644,7 @@ body {
 }
 
 .close-lightbox:hover {
-    color: var(--primary-pink);
+    color: var(--hot-pink);
 }
 
 .lightbox-caption {
