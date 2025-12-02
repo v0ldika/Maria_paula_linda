@@ -6,17 +6,18 @@
 }
 
 :root {
-    /* Cores baseadas nas imagens da LYNN */
-    --primary-pink: #FF1493;
-    --primary-purple: #9370DB;
-    --primary-cyan: #00CED1;
-    --primary-green: #32CD32;
-    --primary-yellow: #FFD700;
+    /* Paleta de Cores Official LYNN */
+    --primary-pink: #EB2C85;       /* Pink vibrante */
+    --primary-purple: #912AB0;     /* Roxo intenso */
+    --primary-cyan: #EFA6F7;       /* Lilás suave */
+    --primary-green: #16F02B;      /* Verde neon */
+    --primary-yellow: #FFF200;     /* Amarelo neon */
+    --secondary-pink: #F7A6C0;     /* Rosa claro */
     --bg-dark: #0a0a0a;
     --bg-darker: #050505;
     --text-light: #ffffff;
     --text-gray: #a0a0a0;
-    --accent-neon: #00ff9f;
+    --accent-neon: #16F02B;        /* Verde neon como accent */
 }
 
 html {
