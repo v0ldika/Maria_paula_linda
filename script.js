@@ -152,20 +152,20 @@ contactForm.addEventListener('submit', async (e) => {
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData);
     
-    // Aqui você pode integrar com serviços como:
+    // Aqui vocÃª pode integrar com serviÃ§os como:
     // - FormSpree
     // - Netlify Forms
     // - EmailJS
     // - Google Forms
     
-    // Exemplo básico de feedback
+    // Exemplo bÃ¡sico de feedback
     const button = contactForm.querySelector('button');
     const originalText = button.textContent;
     
     button.textContent = 'SENDING...';
     button.disabled = true;
     
-    // Simular envio (substitua com sua lógica real)
+    // Simular envio (substitua com sua lÃ³gica real)
     setTimeout(() => {
         button.textContent = 'MESSAGE SENT!';
         button.style.background = 'linear-gradient(135deg, #32CD32, #00ff9f)';
@@ -224,17 +224,17 @@ const createCursorTrail = () => {
 // createCursorTrail();
 
 // Google Drive Gallery Integration Helper
-// Para integrar com Google Drive, você precisará:
-// 1. Criar uma pasta pública no Google Drive
+// Para integrar com Google Drive, vocÃª precisarÃ¡:
+// 1. Criar uma pasta pÃºblica no Google Drive
 // 2. Obter o ID da pasta
 // 3. Usar a API do Google Drive para listar imagens
 
 const GOOGLE_DRIVE_FOLDER_ID = 'YOUR_FOLDER_ID'; // Substitua com o ID real
 
-// Função auxiliar para carregar mais imagens do Google Drive
+// FunÃ§Ã£o auxiliar para carregar mais imagens do Google Drive
 async function loadGoogleDriveImages() {
-    // Implementar integração com Google Drive API
-    // Documentação: https://developers.google.com/drive/api/v3/quickstart/js
+    // Implementar integraÃ§Ã£o com Google Drive API
+    // DocumentaÃ§Ã£o: https://developers.google.com/drive/api/v3/quickstart/js
     
     console.log('Google Drive integration ready. Add your API key and folder ID.');
 }
@@ -273,5 +273,5 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-console.log('%c👾 LYNN STREET ART PORTFOLIO 👾', 'font-size: 20px; font-weight: bold; color: #FF1493;');
-console.log('%cDesigned with 💖 for street art culture', 'font-size: 12px; color: #00CED1;');
+console.log('%cðŸ‘¾ LYNN STREET ART PORTFOLIO ðŸ‘¾', 'font-size: 20px; font-weight: bold; color: #FF1493;');
+console.log('%cDesigned with ðŸ’– for street art culture', 'font-size: 12px; color: #00CED1;');
